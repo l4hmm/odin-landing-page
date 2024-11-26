@@ -8,7 +8,6 @@ body{
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
 /* Header container*/
@@ -49,17 +48,18 @@ a:hover{
 
 .hero {
     display: flex;
-    align-items: c; /* Vertically align text and image in the center */
+    align-items: center; /* Vertically align text and image in the center */
     justify-content: center; /* Space between text and image */
-    gap: 20px; /* Add space between the text and image */
-    padding: 60px 20px; /* Add padding around the hero section */
+    padding: 90px; /* Add padding around the hero section */
     background-color: #1f2937; /* Optional: Background color for hero */
 }
 
 .hero-text {
-    flex: 1; /* Allow text to take up available space */
-    padding-left: 200px;
-    max-width: 50%; /* Limit text width to 50% of the container */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex-basis: 400px; /* Allow text to take up available space */
+    margin-right: 50px;
     color: #f9faf8; /* White text color */
 }
 
@@ -77,6 +77,7 @@ a:hover{
 }
 
 .hero-text button {
+    width: 150px;
     padding: 10px 30px;
     font-size: 1rem;
     font-weight: 300;
@@ -93,16 +94,9 @@ a:hover{
     color: white; /* White text on hover */
 }
 
-.hero-image {
-    flex: 1; /* Allow image to take up the remaining space */
-    display: flex; /* Flexbox to center the image inside the container */
-    justify-content: center;
-    align-items: center;
-}
-
 .hero-image img {
-    max-width: 100%; /* Make image responsive */
-    max-height: 80vh; /* Prevent image from exceeding viewport height */
+    width: 500px; /* Make image responsive */
+    height: 350px; /* Prevent image from exceeding viewport height */
     border-radius: 10px; /* Optional: Rounded corners */
     box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.3); /* Optional: Add shadow */
     object-fit: cover; /* Maintain aspect ratio */
