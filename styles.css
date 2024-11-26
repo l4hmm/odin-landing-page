@@ -8,17 +8,16 @@ body{
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
-    flex: 1;
+    min-height: 100vh;
 }
 
 /* Header container*/
 .header{
     display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center;     /* Center items vertically */
-    padding: 20px 20px;         /* Padding on left and right of header */
+    justify-content: space-between;  /* Center items horizontally */
+    align-items: center;        /* Center items vertically */
+    padding: 20px 40px;         /* Padding on left and right of header */
     background-color: #1f2937;
-    border: 1px solid red;
 
 }
 /* Header list container */
@@ -29,6 +28,7 @@ body{
     color: #e5e7eb;
     font-size: 18px;
 }
+
 /* logo text styling */
 .logo{
     color: #f9faf8;
@@ -47,60 +47,71 @@ a:hover{
     color: #3882f6;
 }
 
-.hero{
+.hero {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40vh;
-    padding: 0 50px;
-    gap: 50px;
-    background-color: #1f2937;
-    border: 1px solid blue;
+    align-items: c; /* Vertically align text and image in the center */
+    justify-content: center; /* Space between text and image */
+    gap: 20px; /* Add space between the text and image */
+    padding: 60px 20px; /* Add padding around the hero section */
+    background-color: #1f2937; /* Optional: Background color for hero */
 }
 
-.hero-text{
-    width: 500px;
+.hero-text {
+    flex: 1; /* Allow text to take up available space */
+    padding-left: 200px;
+    max-width: 50%; /* Limit text width to 50% of the container */
+    color: #f9faf8; /* White text color */
 }
 
-.hero-text h2{
-    font-size: 48px;
-    color: #f9faf8;
-    font-weight: 900;
+.hero-text h2 {
+    font-size: 2.5rem; /* Large heading size */
+    font-weight: 900; /* Bold heading */
     margin-bottom: 1rem;
 }
 
-.hero-text p{
-    font-size: 15px;
-    color: #f9faf8;
+.hero-text p {
+    font-size: 1rem; /* Body text size */
+    font-weight: 300; /* Light font weight */
+    margin-bottom: 1.5rem;
+    line-height: 1; /* Increase line height for better readability */
+}
+
+.hero-text button {
+    padding: 10px 30px;
+    font-size: 1rem;
     font-weight: 300;
-    margin-bottom: 1rem;
+    background-color: #3882f6;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.hero-text button{
-  padding: 10px 30px;
-  font-size: 15px;
-  font-weight: 300;
-  background-color: #3882f6;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
+.hero-text button:hover {
+    background-color: #1f2937; /* Darker background on hover */
+    color: white; /* White text on hover */
 }
 
-.hero-text button:hover{
-    background-color: #e5e7eb;
-    color: #1f2937;
+.hero-image {
+    flex: 1; /* Allow image to take up the remaining space */
+    display: flex; /* Flexbox to center the image inside the container */
+    justify-content: center;
+    align-items: center;
 }
 
-.hero-image img{
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 8px 8px 5px #273345;
+.hero-image img {
+    max-width: 100%; /* Make image responsive */
+    max-height: 80vh; /* Prevent image from exceeding viewport height */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.3); /* Optional: Add shadow */
+    object-fit: cover; /* Maintain aspect ratio */
 }
+
 
 .info-section{
     text-align: center;
-    padding: 20px;
+    padding: 100px 50px;
 }
 
 .info-section h2{
@@ -120,15 +131,123 @@ a:hover{
 
 .icon-box{
     text-align: center;
-    width: 120px;
+    width: 80px;
 }
 
 .icon-box img{
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 10px;
 }
 
 .icon-box p{
     font-size: 18px;
+}
+
+.quote-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e5e7eb;             /* Set background colour */
+    padding: 100px 50px;                     /* Set width */
+    
+}
+
+.quote-section p,
+.quote-section h2 {
+    width: 80%; /* Set width to box the content */
+    max-width: 800px; /* Restrict max width for responsive design */
+    margin: 0 auto; /* Center within the parent container */
+}
+
+.quote-section p{
+    text-align: left;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: lighter;
+    color: #1f2937;
+    
+}
+
+.quote-section h2{
+    text-align: right;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 900;
+    color: black;
+}
+
+/* Section wrapper */
+.cta-section {
+    background-color: white; /* White background for the section */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    padding: 50px 20px; /* Padding around the section */
+}
+
+/* Blue rectangle container */
+.cta-container {
+    background-color: #3882f6; /* Blue background */
+    color: white; /* White text color */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-evenly; /* Space between text and button */
+    align-items: center; /* Center items vertically */
+    padding: 20px 30px; /* Padding inside the rectangle */
+    border-radius: 10px; /* Rounded corners */
+    max-width: 800px; /* Limit the width of the rectangle */
+    width: 90%; /* Make it responsive */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Text container styling (for stacking h3 and p vertically) */
+.cta-container > div {
+    display: flex; /* Flexbox layout for text */
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Add space between h3 and p */
+    max-width: 70%; /* Constrain text width for readability */
+}
+
+/* Heading (h3) styling */
+.cta-container h3 {
+    font-size: 24px; /* Adjust heading size */
+    font-weight: bold; /* Bold text */
+    margin: 0; /* Remove default margin */
+}
+
+/* Paragraph (p) styling */
+.cta-container p {
+    font-size: 16px; /* Adjust paragraph size */
+    font-weight: 300; /* Lighter text */
+    line-height: 1; /* Better readability */
+    margin: 0; /* Remove default margin */
+}
+
+/* Button styling (right side) */
+.cta-container button {
+    padding: 5px 20px; /* Button padding */
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold; /* Bold text for the button */
+    background-color: #3882f6; /* White button background */
+    color: white; /* Blue text */
+    border: 2px solid white; /* White border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effects */
+}
+
+/* Button hover effect */
+.cta-container button:hover {
+    background-color: #1f2937; /* Darker background on hover */
+    color: white; /* White text on hover */
+}
+
+.footer{
+    height: 100px;
+    text-align: center;
+    padding-top: 40px;
+    background-color: #1f2937;
+    color: #e5e7eb;
+    font-size: 15px;
 }
